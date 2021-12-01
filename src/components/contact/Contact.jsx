@@ -21,6 +21,6 @@ export default function Contact() {
     }
 
     > <input type="text" placeholder="Email" /> <textarea placeholder="Message"></textarea> <button type="submit">Send</button> {
-            message && <span>Thanks, I'll reply ASAP :)</span>}
+            message && <span>Merci, Je repondrais bientôt :)</span>}
     </form> </div> </div>);
 }

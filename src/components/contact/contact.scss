@@ -16,6 +16,7 @@
       height: 100%;
     }
   }
+
   .right {
     flex: 1;
     display: flex;
@@ -61,7 +62,7 @@
         width: 150px;
         height: 30px;
         color: white;
-        background-color: crimson;
+        background-color: $secColor;
         border: none;
         border-radius: 10px;
         font-weight: 500;
@@ -73,7 +74,8 @@
       }
 
       span {
-        color: green;
+        color: rgb(146, 241,
+2);
       }
     }
   }
