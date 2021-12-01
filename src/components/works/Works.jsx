@@ -29,35 +29,30 @@ export default function Works() {
         },
     ];
 
-    const handelClick = (way) => {
-        way === "left" ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2) : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0)
-    }
+    const handleClick = (way) => {
+        way === "left"
+            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+            : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
+    };
 
     return (
         <div className="works" id="works">
-
             <div
                 className="slider"
-                style={{ transform: `translateX(-$(currentSlide * 100)vw)` }}
+                style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
             >
                 {data.map((d) => (
                     <div className="container">
-
                         <div className="item">
-
                             <div className="left">
-
                                 <div className="leftContainer">
-
                                     <div className="imgContainer">
-
                                         <img src={d.icon} alt="" />
                                     </div>
                                     <h2> {d.title}</h2> <p> {d.desc}</p> <span>Projects</span>
                                 </div>
                             </div>
                             <div className="right">
-
                                 <img
                                     src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"
                                     alt=""
@@ -67,12 +62,17 @@ export default function Works() {
                     </div>
                 ))}
             </div>
-            <img src="assets/arrow.png" className="arrow left" alt="gauche" onClick={() => handelClick("left")} />
+            <img
+                src="assets/arrow.png"
+                className="arrow left"
+                alt="gauche"
+                onClick={() => handleClick("left")}
+            />
             <img
                 src="assets/arrow.png"
                 className="arrow right"
                 alt="fleche_droite"
-                onClick={() => handelClick()}
+                onClick={() => handleClick()}
             />
         </div>
     );
