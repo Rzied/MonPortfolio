@@ -22,6 +22,8 @@
       align-items: flex-end;
       justify-content: center;
       float: right;
+      box-shadow: 0 2px 0px 0px $secColor;
+      overflow: hidden;
 
       @include mobile {
         align-items: flex-start;
@@ -32,6 +34,11 @@
 
         @include mobile {
           height: 50%;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          transition: 1s ease-out;
         }
       }
     }
@@ -44,6 +51,7 @@
     position: relative;
 
     .wrapper {
+      // background-color: blue;
       width: 100%;
       height: 100%;
       padding-left: 50px;
@@ -56,17 +64,40 @@
         align-items: center;
       }
 
+      .icons {
+        overflow: hidden;
+      }
+
+      .icons i {
+        font-size: 30px;
+        color: $secColor;
+        padding: 8px;
+        padding-left: 10px;
+
+        &:hover {
+          transform: scale(1.5);
+          // transform: matrix3d(5);
+          overflow: hidden;
+          // margin-bottom: 5px;
+        }
+      }
+
       h1 {
         font-size: 60px;
         margin: 10px 0;
 
         @include mobile {
           font-size: 40px;
+          overflow: hidden;
         }
       }
 
       h2 {
         font-size: 35px;
+
+        @include mobile {
+          overflow: hidden;
+        }
       }
 
       h3 {
@@ -74,6 +105,7 @@
 
         @include mobile {
           font-size: 20px;
+          overflow: hidden;
         }
 
         span {
@@ -95,9 +127,75 @@
           }
         }
       }
+
+      button {
+        width: 150px;
+        height: 40px;
+        align-items: center;
+        color: white;
+        background-color: $secColor;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: 0.2s;
+
+        // font-family: "Poppins SemiBold";
+        @include mobile {
+          width: 120px;
+          // margin-bottom: 10px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+      }
+
+      .profile-options {
+        @include mobile {
+          overflow: hidden;
+        }
+      }
+
+      .primary-btn {
+        color: white;
+        font-size: 12px;
+        background-color: $mainColor;
+        border: 3px solid $secColor;
+        margin-top: 20px;
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
+      }
+
+      .primary-btn:hover {
+        color: aliceblue;
+        // background-color: $secColor;
+      }
+
+      .highlighted-btn {
+        color: white;
+        font-size: 12px;
+        background-color: $secColor;
+        margin: 0 0 0 28px;
+        margin-top: 20px;
+
+        @include mobile {
+          margin-bottom: 10px;
+        }
+
+        &:hover {
+          // border: 2px solid $mainColor;
+          color: aliceblue;
+          background-color: $mainColor;
+          // margin: 0 0 0 28px;
+        }
+      }
     }
 
-    a {
+    a.arrow {
       position: absolute;
       bottom: 10px;
       left: 40%;
@@ -115,3 +213,4 @@
     }
   }
 }
+

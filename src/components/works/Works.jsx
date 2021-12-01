@@ -42,10 +42,10 @@ export default function Works() {
                 style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
             >
                 {data.map((d) => (
-                    <div className="container">
+                    <div className="container" key={d.id}>
                         <div className="item">
                             <div className="left">
-                                <div className="leftContainer">
+                                <div className="leftContainer" >
                                     <div className="imgContainer">
                                         <img src={d.icon} alt="" />
                                     </div>
@@ -74,6 +74,6 @@ export default function Works() {
                 alt="fleche_droite"
                 onClick={() => handleClick()}
             />
-        </div>
+        </div >
     );
 }
