@@ -49,7 +49,9 @@ export default function Works() {
                                     <div className="imgContainer">
                                         <img src={d.icon} alt="" />
                                     </div>
-                                    <h2> {d.title}</h2> <p> {d.desc}</p> <span>Projects</span>
+                                    <h2> {d.title}</h2>
+                                    <p> {d.desc}</p>
+                                    <span><a href="#">Demo</a> </span>
                                 </div>
                             </div>
                             <div className="right">
