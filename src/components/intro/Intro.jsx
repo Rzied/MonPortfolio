@@ -48,10 +48,12 @@ export default function Intro() {
           <h1>Zied RJEB</h1>
           <h3>Web Developper <span ref={textRef}> </span></h3>
           <div className="profile-options">
-            <button className="btn primary-btn">
-              {""}
-              Hire Me{" "}
-            </button>
+            <a href="#contact">
+              <button className="btn primary-btn">
+                Hire Me
+              </button>
+            </a>
+
             <a href="Zied.pdf" download="Rjeb Zied.pdf">
               <button className="btn highlighted-btn">Get Resume</button>
             </a>
